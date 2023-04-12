@@ -1,20 +1,19 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const navbar = document.getElementById('navbar');
+    const heading = document.getElementById('heading');
   
     window.addEventListener('scroll', () => {
       if (window.scrollY >= 100) {
-          navbar.classList.add('navbar_black');
+          heading.classList.add('heading_black');
       } else {
-          navbar.classList.remove('navbar_black');
+          heading.classList.remove('heading_black');
       }
     });
 
-  const menuToggle = document.querySelector('.menu-toggle');
-  const navbarMenu = document.querySelector('.navbar-menu');
-
-  menuToggle.addEventListener('click', () => {
-    navbarMenu.classList.toggle('show');
-  });
+  hamburger = document.querySelector(".hamburger");
+  hamburger.onclick = function() {
+    navbar = document.querySelector(".navbar");
+    navbar.classList.toggle("active");
+  }
 
 });
   
